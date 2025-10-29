@@ -1,4 +1,8 @@
-@import "./variables.scss";
+@use "./variables.scss" as *;
+
+.l-header {
+    background-color: $white;
+}
 
 .container {
     max-width: 1640px;
@@ -6,5 +10,93 @@
 
     &-header {
         max-width: 1024px;
+        background-color: $white;
+        padding: 0 20px;
+        height: 44px;
+        box-sizing: content-box;
+    }
+}
+
+.b-header {
+    .header {
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        &__list {
+            display: flex;
+            gap: 20px;
+
+            a {
+                display: block;
+                font-size: 12px;
+                color: rgba($shark, .8);
+                transition: color $baseTrans;
+
+                &:hover {
+                    color: $shark;
+                }
+            }
+        }
+
+        &__btns {
+            display: flex;
+            gap: 30px;
+
+            img {
+                display: block;
+            }
+        }
+    }
+}
+
+.b-banner {
+    min-height: 695px;
+    position: relative;
+    padding: 0 0 55px;
+    display: flex;
+    align-items: flex-end;
+    background-color: $grey;
+
+    .banner {
+        &__wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            color: $shark;
+            font: {
+                size: 56px;
+                weight: 600;
+            }
+            margin: 0 0 5px;
+        }
+
+        &__text {
+            color: $shark;
+            font-size: 28px;
+            margin: 0 0 20px;
+        }
+
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 }
