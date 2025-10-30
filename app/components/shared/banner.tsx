@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import Button from "../ui/button";
 
 interface Props {
     date?: string,
@@ -19,6 +20,7 @@ const Banner:React.FC<Props> = ({date, time, title}) => {
                     <div className="banner__text">
                         Watch online on {date} at {time}
                     </div>
+                    <Button className="b-btn--blue" text="Learn more" link="/about"/>
                 </div>
             </Container>
             <div className="banner__img">

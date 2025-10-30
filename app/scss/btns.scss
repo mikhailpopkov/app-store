@@ -1,0 +1,55 @@
+@use "./variables.scss" as *;
+
+.b-btn {
+    padding: 11px 22px;
+    border: 1px solid;
+    border-radius: 980px;
+    font-size: 17px;
+    transition: color $baseTrans, background-color $baseTrans, border-color $baseTrans;
+
+    &.b-btn {
+        &--blue {
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+
+            &:hover {
+                background-color: transparent;
+                color: $blue;
+            }
+        }
+
+        &--transparent {
+            background-color: transparent;
+            color: $blue;
+            border-color: $blue;
+
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+
+        &--white {
+            background-color: $white;
+            border-color: $white;
+            color: $black;
+
+            &:hover {
+                background-color: transparent;
+                color: $white;
+            }
+
+            &-transparent {
+                background-color: transparent;
+                color: $white;
+                border-color: $white;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
