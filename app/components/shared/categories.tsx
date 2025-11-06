@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Button from "../ui/button";
 
 interface Props {
-    id: number,
+    id: string,
     title: string,
     text: string,
     img: string,
@@ -12,7 +12,7 @@ interface Props {
 
 const Categories:React.FC<Props> = ({id, title, text, img, className}) => {
     return (
-        <div className={classNames('cateogories__block', className)}>
+        <div className={classNames('cateogories__block', className)} id={id}>
             <div className="categories__block-container">
                 <div className="categories__block-title">
                     {title}
@@ -25,7 +25,7 @@ const Categories:React.FC<Props> = ({id, title, text, img, className}) => {
                     <Button className="b-btn--blue" link="iphone-15-pro" text="Explore iPhone 15 Pro"/>
                 </div>
             </div>
-        {/* IMAGE */}
+            <img src={img} alt={title}/>
         </div>
     )
 }
